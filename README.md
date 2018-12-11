@@ -22,14 +22,14 @@ Name must be specified twice:
 
 **1. in file src/CryptoNoteConfig.h** - `CRYPTONOTE_NAME` constant
 
-Example: 
+Example:
 ```
 const char CRYPTONOTE_NAME[] = "furiouscoin";
 ```
 
 **2. in src/CMakeList.txt file** - set_property(TARGET daemon PROPERTY OUTPUT_NAME "YOURCOINNAME**d**")
 
-Example: 
+Example:
 ```
 set_property(TARGET daemon PROPERTY OUTPUT_NAME "furiouscoind")
 ```
@@ -37,7 +37,7 @@ set_property(TARGET daemon PROPERTY OUTPUT_NAME "furiouscoind")
 **Note:** You should also change a repository name.
 
 
-### Second step. Emission logic 
+### Second step. Emission logic
 
 **1. Total money supply** (src/CryptoNoteConfig.h)
 
@@ -52,7 +52,7 @@ const uint64_t MONEY_SUPPLY = (uint64_t)(-1);
 
 Be default CryptoNote provides emission formula with slight decrease of block reward with each block. This is different from Bitcoin where block reward halves every 4 years.
 
-`EMISSION_SPEED_FACTOR` constant defines emission curve slope. This parameter is required to calulate block reward. 
+`EMISSION_SPEED_FACTOR` constant defines emission curve slope. This parameter is required to calulate block reward.
 
 Example:
 ```
@@ -201,7 +201,7 @@ const char GENESIS_COINBASE_TX_HEX[] = "013c01ff0001ffff...785a33d9ebdba68b0";
 Recompile everything again. Your coin code is ready now. Make an announcement for the potential users and enjoy!
 
 
-## Building CryptoNote 
+## Building CryptoNote
 
 ### On *nix
 
@@ -213,6 +213,11 @@ You may download them from:
 * http://www.cmake.org/
 * http://www.boost.org/
 * Alternatively, it may be possible to install them using a package manager.
+
+```
+sudo apt install gcc make cmake libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-date-time-dev libboost-chrono-dev libboost-regex-dev libboost-serialization-dev libboost-program-options-dev
+make
+```
 
 To build, change to a directory where this file is located, and run `make`. The resulting executables can be found in `build/release/src`.
 
@@ -230,7 +235,7 @@ Dependencies: MSVC 2013 or later, CMake 2.8.6 or later, and Boost 1.55. You may 
 * http://www.cmake.org/
 * http://www.boost.org/
 
-To build, change to a directory where this file is located, and run theas commands: 
+To build, change to a directory where this file is located, and run theas commands:
 ```
 mkdir build
 cd build
