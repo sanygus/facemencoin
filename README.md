@@ -214,11 +214,6 @@ You may download them from:
 * http://www.boost.org/
 * Alternatively, it may be possible to install them using a package manager.
 
-```
-sudo apt install gcc make cmake libboost-system-dev libboost-filesystem-dev libboost-thread-dev libboost-date-time-dev libboost-chrono-dev libboost-regex-dev libboost-serialization-dev libboost-program-options-dev
-make
-```
-
 To build, change to a directory where this file is located, and run `make`. The resulting executables can be found in `build/release/src`.
 
 **Advanced options:**
